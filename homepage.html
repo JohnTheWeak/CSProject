@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<head>
+    <title>Pairwise Dance Judging: How Data Fuels Fair AI Rankings</title>
+</head>
+<body style="font-family: Arial, Trebuchet Mf; margin:40px; line-height:1.6; background:#f9f9fb; color:#333;">
+
+    <h1 style="text-align:center; font-size:32px; color:#000000; margin-bottom:10px;">
+        Pairwise Dance Judging: How Data Fuels Fair AI Rankings
+    </h1>
+
+ <hr style="border:1px solid #ccc; margin:10px 0;">
+
+    <h2 style="text-align:left; font-size:18px; color:#172330; margin-left:20px;">
+        <br> This web is developed for users to explore our project. <br>
+        <br> It allows users to understand how we use AI to rank dance performances fairly through pairwise comparisons by playing and  judging the simple videos. <br>
+        <br> The result will show the differences between AI ranking and human ranking based on their judgements, with the final reflection on whether AI is trustworthy in those rating. <br>
+    </h2>
+
+    <hr style="border:1px solid #ccc; margin:40px 0;">
+
+    <!-- Group Members Table -->
+    <h2 style="font-size:17px; color:#004080;">Group 4: Members and Workload</h2>
+    <table border="1" style="width:100%; border-collapse:collapse; font-size:16px; background:white;">
+        <tr style="background:#e6f2ff;">
+            <th style="padding:12px;">No.</th>
+            <th style="padding:12px;">Full Name</th>
+            <th style="padding:12px;">Student ID</th>
+            <th style="padding:12px;">Contribution</th>
+        </tr>
+        <tr style="text-align:center;">
+            <td style="padding:10px;">1</td><td>[Name 1]</td><td>[Student ID 1]</td><td style="font-weight:bold;">100%</td>
+        </tr>
+        <tr style="text-align:center; background:#f8f8f8;">
+            <td style="padding:10px;">2</td><td>[Name 2]</td><td>[Student ID 2]</td><td style="font-weight:bold;">100%</td>
+        </tr>
+        <tr style="text-align:center;">
+            <td style="padding:10px;">3</td><td>[Name 3]</td><td>[Student ID 3]</td><td style="font-weight:bold;">100%</td>
+        </tr>
+        <tr style="text-align:center; background:#f8f8f8;">
+            <td style="padding:10px;">4</td><td>[Name 4]</td><td>[Student ID 4]</td><td style="font-weight:bold;">100%</td>
+        </tr>
+    </table>
+
+<!-- GET STARTED BUTTON WITH HOVER EFFECT -->
+    <div style="text-align:center; margin:50px 0;">
+        <button id="getStartedBtn" onclick="location.href='content.html'" 
+        style="font-size:20px; padding:12px 35px; background:#d0d0d0; color:#333; border:none; cursor:pointer; border-radius:8px; box-shadow:0 3px 8px rgba(0,0,0,0.1); transition: background 0.3s ease;">
+    Get Started → Explore Our Project
+        </button>
+    </div>
+    <style>
+    #getStartedBtn:hover {
+        background: #28a745 !important;   /* Bootstrap success green */
+        color: white !important ;
+    }
+    </style>
+
+    <!-- HORIZONTAL LINE TO SEPARATE SECTIONS -->
+    <hr style="border:1px solid #ccc; margin:60px 0;">
+
+    <!-- Techniques Section -->
+    <h2 style="font-size:20px; color:#004080; text-align:center; margin-bottom:30px;">
+        Click to See Techniques We Used
+    </h2>
+
+    <div style="text-align:center; margin:50px 0;">
+        <button onclick="toggleHTML()" 
+                style="font-size:15px; padding:15px 35px; background:#466d4f; color:white; border:none; margin:12px; cursor:pointer; border-radius:6px;">
+            HTML
+        </button>
+
+        <button onclick="toggleCSS()" 
+                style="font-size:15px; padding:15px 35px; background:#007bff; color:white; border:none; margin:12px; cursor:pointer; border-radius:6px;">
+            CSS
+        </button>
+
+        <button onclick="toggleJS()" 
+                style="font-size:15px; padding:15px 35px; background:#ffc107; color:black; border:none; margin:12px; cursor:pointer; border-radius:6px;">
+            JavaScript
+        </button>
+    </div>
+
+    <hr style="border:1px solid #ccc; margin:40px 0;">
+
+    <!-- Result box – hidden until clicked -->
+    <div id="techniqueBox" style="display:none; margin:40px auto; max-width:800px; padding:30px; border:3px solid #1e4770; background:#e6f5ff; text-align:left; font-size:15px; border-radius:8px;">
+    </div>
+
+    <!-- TBL Reflection button -->
+    <div style="text-align:center; margin:60px 0;">
+        <button onclick="location.href='Learning.html'" 
+        <button onclick="location.href='learning.html'">
+    Go to Team-Based Learning (TBL) Reflection
+</button>
+                style="font-size:18px; padding:14px 40px; background:#0066cc; color:white; border:none; cursor:pointer; border-radius:8px;">
+            Go to Team-Based Learning (TBL) Reflection
+        </button>
+    </div>
+
+
+    <!-- JavaScript (toggle open/close) -->
+    <script>
+        let currentOpen = "";
+
+        function toggleHTML() {
+            const box = document.getElementById("techniqueBox");
+            if (currentOpen === "html") {
+                box.style.display = "none";
+                currentOpen = "";
+            } else {
+                box.style.display = "block";
+                box.innerHTML = "<strong>HTML Techniques We Used:</strong><ul style='margin-top:10px; line-height:1.8;'>" +
+                    "<li>Headings (&lt;h1&gt;, &lt;h2&gt;)</li>" +
+                    "<li>Paragraphs and text</li>" +
+                    "<li>Tables</li>" +
+                    "<li>Unordered lists</li>" +
+                    "<li>Buttons and links</li>" +
+                    "<li>Semantic structure</li>" +
+                    "</ul>";
+                currentOpen = "html";
+            }
+        }
+
+        function toggleCSS() {
+            const box = document.getElementById("techniqueBox");
+            if (currentOpen === "css") {
+                box.style.display = "none";
+                currentOpen = "";
+            } else {
+                box.style.display = "block";
+                box.innerHTML = "<strong>CSS Techniques We Used:</strong><ul style='margin-top:10px; line-height:1.8;'>" +
+                    "<li>Inline styling</li>" +
+                    "<li>Colors and backgrounds</li>" +
+                    "<li>Padding & margin</li>" +
+                    "<li>Text alignment</li>" +
+                    "<li>Borders & border-radius</li>" +
+                    "<li>Hover effects</li>" +
+                    "</ul>";
+                currentOpen = "css";
+            }
+        }
+
+        function toggleJS() {
+            const box = document.getElementById("techniqueBox");
+            if (currentOpen === "js") {
+                box.style.display = "none";
+                currentOpen = "";
+            } else {
+                box.style.display = "block";
+                box.innerHTML = "<strong>JavaScript Techniques We Used (in tbl.html):</strong><ul style='margin-top:10px; line-height:1.8;'>" +
+                    "<li>Interactive dropdown menu</li>" +
+                    "<li>Dynamic content update</li>" +
+                    "<li>Event handling</li>" +
+                    "<li>Conditional logic</li>" +
+                    "<li>Page navigation</li>" +
+                    "</ul>";
+                currentOpen = "js";
+            }
+        }
+    </script>
+
+</body>
+</html>
