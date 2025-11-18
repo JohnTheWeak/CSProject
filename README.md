@@ -1,2 +1,0 @@
-# CSProject
-School Project
