@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBL Reflection</title>
+</head>
+<body>
+
+    <!-- Nice big title -->
+    <h1 style="text-align:center; font-size:40px; margin:30px 0; color:#003366;">
+        Team-Based Learning (TBL) Reflection
+    </h1>
+
+    <!-- Back button at the top -->
+    <p style="text-align:center;">
+        <button onclick="location.href='index.html'" 
+                style="font-size:18px; padding:12px 25px; background:#0066cc; color:white; border:none; cursor:pointer;">
+            Back to Home Page (index.html)
+        </button>
+    </p>
+
+    <hr style="border:1px solid #656464; margin:40px 0;">
+
+    <h2 style="color:#004080; border-bottom:3px solid #004080; padding-bottom:5px;">
+        What is Team-Based Learning?
+    </h2>
+    <p style="font-size:17px; line-height:1.6;">
+        We worked as a permanent team of 4 members. 
+        Everyone first studied alone, then we met, discussed problems, 
+        built the website together and gave each other feedback. 
+        It was much better than working alone!
+    </p>
+
+    <h2 style="color:#004080; border-bottom:3px solid #004080; padding-bottom:5px;">
+        What We Learned as a Team
+    </h2>
+    <ul style="font-size:17px; line-height:1.8;">
+        <li>Planning on paper first saves a lot of time</li>
+        <li>Always close your tags properly!</li>
+        <li>Using the same heading sizes makes the site look neat</li>
+        <li>Every image needs alt text</li>
+        <li>We must test on phones too</li>
+        <li>Short daily check-ins prevent big problems</li>
+    </ul>
+
+    <!-- Nicer label + dropdown -->
+    <h2 style="color:#004080; border-bottom:3px solid #004080; padding-bottom:5px;">
+        Feedback for Each Member
+    </h2>
+
+    <p style="font-size:20px; font-weight:bold; color:#003366;">
+        Select a team member to read their feedback:
+    </p>
+
+    <p style="text-align:center;">
+        <select id="memberSelect" onchange="showFeedback()" 
+                style="font-size:16px; padding:10px; width:300px;">
+            <option value="">-- Choose a name --</option>
+            <option value="1">[Name 1]</option>
+            <option value="2">[Name 2]</option>
+            <option value="3">[Name 3]</option>
+            <option value="4">[Name 4]</option>
+        </select>
+    </p>
+
+    <div id="feedbackDisplay" 
+         style="margin:30px auto; max-width:700px; padding:20px; border:3px solid #003366; background:#f0f8ff; min-height:120px; font-size:18px;">
+        Please choose a name from the list above.
+    </div>
+
+    <!-- Simple JavaScript (edit the 4 feedback parts below) -->
+    <script>
+        function showFeedback() {
+            const choice = document.getElementById("memberSelect").value;
+            const area = document.getElementById("feedbackDisplay");
+
+            if (choice === "1") {
+                area.innerHTML = "<strong>[Name 1]</strong><br>What they did: …<br>Good points: …<br>Can improve: …";
+            } else if (choice === "2") {
+                area.innerHTML = "<strong>[Name 2]</strong><br>What they did: …<br>Good points: …<br>Can improve: …";
+            } else if (choice === "3") {
+                area.innerHTML = "<strong>[Name 3]</strong><br>What they did: …<br>Good points: …<br>Can improve: …";
+            } else if (choice === "4") {
+                area.innerHTML = "<strong>[Name 4]</strong><br>What they did: …<br>Good points: …<br>Can improve: …";
+            } else {
+                area.innerHTML = "Please choose a name from the list above.";
+            }
+        }
+    </script>
+
+</body>
+</html>
